@@ -14,8 +14,8 @@ class TestDetectionValidator(unittest.TestCase):
     def setUpClass(cls):
         cls.events = load_events(DEFAULT_FIXTURE)
 
-    def test_fixture_has_seven_events(self):
-        self.assertEqual(len(self.events), 7)
+    def test_fixture_has_eight_events(self):
+        self.assertEqual(len(self.events), 8)
 
     def test_windows_powershell_encoded(self):
         self.assertTrue(detect_encoded_powershell(self.events[0]))
@@ -63,6 +63,12 @@ class TestDetectionValidator(unittest.TestCase):
         self.assertTrue(
             detect_encoded_powershell_tuned(event)
         )
+
+    def test_same_allowlisted_context_suppresses_suspicious_event(self):
+        event = self.events[7]
+
+        self.assertTrue(detect_encoded_powershell(event))
+        self.assertFalse(detect_encoded_powershell_tuned(event))
 
 
 if __name__ == "__main__":

@@ -1,43 +1,39 @@
 # Project Status — Purple Team Detection Validation Lab
 
-## Current Progress
+## Estimated Progress
 
-Estimated completion: 45%
+85%
 
 ## Completed Deliverables
 
-- Project repository structure
+- Repository structure and Git version control
 - MITRE ATT&CK T1059.001 scenario
-- Synthetic Sysmon Event ID 1 fixtures
-- Baseline Sigma detection rule
-- Contextual Sigma detection rule
+- Synthetic Sysmon Event ID 1 telemetry
+- Synthetic PowerShell Event ID 4104 telemetry
+- Baseline and contextual Sigma rules
 - Python detection validator
-- Automated unit tests
-- Detection evaluation and confusion matrix
-- Baseline versus contextual comparison
+- False positive and false negative evaluation
+- Confusion matrix and performance metrics
 - Sigma to Splunk SPL conversion
-- Automated Markdown report generation
+- Formal Sigma rule validation
+- Synthetic telemetry generator
+- Event correlation engine
+- Integrated Markdown reporting
+- Automated unit tests
+- Full pipeline orchestration
 
-## Current Validation Results
+## Current Validation
 
-Synthetic dataset: 7 events
-
-Baseline:
-- TP: 4
-- TN: 2
-- FP: 1
-- FN: 0
-
-Contextual:
-- TP: 4
-- TN: 3
-- FP: 0
-- FN: 0
-
-Automated tests: 13 passed
+- 38 automated tests passed
+- 2 Sigma rules validated
+- 8 synthetic process events
+- 2 synthetic Script Block events
+- Baseline and contextual detection comparison
+- Full pipeline execution successful
 
 ## Technologies
 
+- Kali Linux
 - Python
 - MITRE ATT&CK
 - Sigma
@@ -46,16 +42,24 @@ Automated tests: 13 passed
 - Splunk SPL
 - Git
 
-## Pending Work
+## Remaining Work
 
-- Validate Sigma rules with a dedicated rule validator
-- Expand detection test coverage
-- Prepare controlled adversary simulations
-- Collect real Windows Sysmon telemetry
-- Validate detections using real events
-- Integrate and document Purple Team findings
+- Improve detection robustness
+- Expand false positive and false negative scenarios
+- Improve event correlation
+- Finalize technical documentation
+- Organize evidence and reports
+- Prepare GitHub publication
 
-## Important Limitation
+## Limitations
 
-All current detection metrics are based on synthetic laboratory events.
-They do not represent production detection performance.
+All telemetry is synthetic.
+No real Windows endpoint has been monitored.
+No live Splunk execution has been performed.
+No real Atomic Red Team execution has been performed.
+
+## Objective
+
+Demonstrate a reproducible Purple Team detection
+validation workflow using threat-informed detection,
+synthetic telemetry, Python automation and Sigma.

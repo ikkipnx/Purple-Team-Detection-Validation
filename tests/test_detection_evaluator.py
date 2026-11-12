@@ -30,7 +30,7 @@ class TestDetectionEvaluator(unittest.TestCase):
             detect_encoded_powershell,
         )
 
-        self.assertEqual(metrics["TP"], 4)
+        self.assertEqual(metrics["TP"], 5)
         self.assertEqual(metrics["TN"], 2)
         self.assertEqual(metrics["FP"], 1)
         self.assertEqual(metrics["FN"], 0)
@@ -45,7 +45,7 @@ class TestDetectionEvaluator(unittest.TestCase):
         self.assertEqual(metrics["TP"], 4)
         self.assertEqual(metrics["TN"], 3)
         self.assertEqual(metrics["FP"], 0)
-        self.assertEqual(metrics["FN"], 0)
+        self.assertEqual(metrics["FN"], 1)
 
 
 if __name__ == "__main__":

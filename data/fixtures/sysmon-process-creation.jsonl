@@ -4,4 +4,5 @@
 {"EventID":1,"Image":"C:\\Program Files\\PowerShell\\7\\pwsh.exe","CommandLine":"pwsh.exe -e <REDACTED>","User":"LAB\\analyst"}
 {"EventID":1,"Image":"C:\\Program Files\\PowerShell\\7\\pwsh.exe","CommandLine":"pwsh.exe -ec <REDACTED>","User":"LAB\\analyst"}
 {"EventID":1,"Image":"C:\\Program Files\\PowerShell\\7\\pwsh.exe","CommandLine":"pwsh.exe -ExecutionPolicy Bypass -Command Get-Process","User":"LAB\\analyst"}
-{"EventID":1,"Image":"C:\\Program Files\\PowerShell\\7\\pwsh.exe","CommandLine":"pwsh.exe -NoProfile -EncodedCommand <REDACTED>","User":"LAB\\admin","ParentImage":"C:\\Program Files\\Company\\AutomationAgent.exe"}
+{"EventID":1,"Image":"C:\\Program Files\\PowerShell\\7\\pwsh.exe","CommandLine":"pwsh.exe -NoProfile -EncodedCommand <REDACTED_BENIGN>","User":"LAB\\admin","ParentImage":"C:\\Program Files\\Company\\AutomationAgent.exe","ProcessId":7007,"Computer":"LAB-WIN11"}
+{"EventID":1,"Image":"C:\\Program Files\\PowerShell\\7\\pwsh.exe","CommandLine":"pwsh.exe -ec <REDACTED_SUSPICIOUS>","User":"LAB\\admin","ParentImage":"C:\\Program Files\\Company\\AutomationAgent.exe","ProcessId":7008,"Computer":"LAB-WIN11"}

@@ -6,3 +6,4 @@ TC04,4,true,PowerShell 7 short parameter e
 TC05,5,true,PowerShell 7 short parameter ec
 TC06,6,false,Benign ExecutionPolicy and Get-Process
 TC07,7,false,Authorized administrative automation
+TC08,8,true,Suspicious encoded command matching the allowlisted user and parent context
