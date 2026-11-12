@@ -134,7 +134,7 @@ Purple-Team-Detection-Validation/
 ├── .gitignore
 └── README.md
 
-[200~```
+```
 
 ## Installation
 
