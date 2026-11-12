@@ -1,0 +1,8 @@
+case_id,event_index,expected_alert,context
+TC01,1,true,PowerShell encoded command
+TC02,2,false,Benign Get-Process
+TC03,3,true,PowerShell 7 encoded command
+TC04,4,true,PowerShell 7 short parameter e
+TC05,5,true,PowerShell 7 short parameter ec
+TC06,6,false,Benign ExecutionPolicy and Get-Process
+TC07,7,false,Authorized administrative automation

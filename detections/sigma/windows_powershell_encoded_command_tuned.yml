@@ -1,0 +1,39 @@
+title: Suspicious PowerShell Encoded Command Execution - Contextual
+id: c31d2a44-7a83-4f3e-9b21-5e1c7a903d62
+status: experimental
+description: Detects encoded PowerShell execution while excluding a specifically approved synthetic automation context.
+references:
+    - https://attack.mitre.org/techniques/T1059/001/
+author: Purple Team Detection Validation Lab
+date: 2026/11/12
+tags:
+    - attack.execution
+    - attack.t1059.001
+logsource:
+    product: windows
+    category: process_creation
+    service: sysmon
+
+detection:
+    selection_encoded:
+        Image|endswith:
+            - '\powershell.exe'
+            - '\pwsh.exe'
+        CommandLine|contains: '-EncodedCommand'
+
+    selection_pwsh_short:
+        Image|endswith: '\pwsh.exe'
+        CommandLine|contains:
+            - ' -e '
+            - ' -ec '
+
+    filter_authorized_automation:
+        ParentImage: 'C:\Program Files\Company\AutomationAgent.exe'
+        User: 'LAB\admin'
+
+    condition: 1 of selection* and not filter_authorized_automation
+
+falsepositives:
+    - Legitimate administrative PowerShell automation
+
+level: medium

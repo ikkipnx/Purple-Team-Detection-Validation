@@ -1,0 +1,7 @@
+{"EventID":1,"Image":"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe","CommandLine":"powershell.exe -NoProfile -EncodedCommand <REDACTED>","User":"LAB\\analyst"}
+{"EventID":1,"Image":"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe","CommandLine":"powershell.exe -NoProfile -Command Get-Process","User":"LAB\\analyst"}
+{"EventID":1,"Image":"C:\\Program Files\\PowerShell\\7\\pwsh.exe","CommandLine":"pwsh.exe -NoProfile -EncodedCommand <REDACTED>","User":"LAB\\analyst"}
+{"EventID":1,"Image":"C:\\Program Files\\PowerShell\\7\\pwsh.exe","CommandLine":"pwsh.exe -e <REDACTED>","User":"LAB\\analyst"}
+{"EventID":1,"Image":"C:\\Program Files\\PowerShell\\7\\pwsh.exe","CommandLine":"pwsh.exe -ec <REDACTED>","User":"LAB\\analyst"}
+{"EventID":1,"Image":"C:\\Program Files\\PowerShell\\7\\pwsh.exe","CommandLine":"pwsh.exe -ExecutionPolicy Bypass -Command Get-Process","User":"LAB\\analyst"}
+{"EventID":1,"Image":"C:\\Program Files\\PowerShell\\7\\pwsh.exe","CommandLine":"pwsh.exe -NoProfile -EncodedCommand <REDACTED>","User":"LAB\\admin","ParentImage":"C:\\Program Files\\Company\\AutomationAgent.exe"}

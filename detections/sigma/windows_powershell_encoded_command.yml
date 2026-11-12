@@ -1,0 +1,35 @@
+title: Suspicious PowerShell Encoded Command Execution
+id: 8f71b296-3d60-4f5c-a0e4-7b92e6f18301
+status: experimental
+description: Detects encoded command execution in Windows PowerShell and PowerShell 7.
+references:
+    - https://attack.mitre.org/techniques/T1059/001/
+    - https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pwsh
+author: Purple Team Detection Validation Lab
+date: 2026/11/12
+tags:
+    - attack.execution
+    - attack.t1059.001
+logsource:
+    product: windows
+    category: process_creation
+    service: sysmon
+
+detection:
+    selection_encoded:
+        Image|endswith:
+            - '\powershell.exe'
+            - '\pwsh.exe'
+        CommandLine|contains: '-EncodedCommand'
+
+    selection_pwsh_short:
+        Image|endswith: '\pwsh.exe'
+        CommandLine|contains:
+            - ' -e '
+            - ' -ec '
+
+    condition: 1 of selection_*
+
+falsepositives:
+    - Legitimate administrative scripts using encoded PowerShell commands
+level: medium
